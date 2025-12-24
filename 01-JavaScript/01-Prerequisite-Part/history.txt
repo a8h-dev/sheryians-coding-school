@@ -1,2 +1,70 @@
-History of JavaScript
+History of JavaScript 
 
+Interpreted Before 2008 Before Chrome's V8 Engine (Slow)
+Compiled (Fast) -> Both after Chrome (Just In Time)
+
+Netscape Navigator:
+A web browser which used to dominate the world in 90s with the market share around 90%.
+This is where the story of JavaScript starts from.
+
+Static Websites:
+Websites used to be static then and browsers could not do even a singal calculation at that time.
+In order to do even a simple math browsers had to talk to servers.
+Example: Time calculator now and then in browsers.
+
+Making the language of web:
+So the founder of Netscape decided to develop a programming language for his Netscape.
+Marc Andreessen --> Founder of Netscape
+
+Question> Which was the first browser for public use and who developed it.
+
+Answer: 
+First Web Browser Ever
+Name: WorldWideWeb (later renamed Nexus)
+Developer: Tim Berners-Lee
+Year: 1990
+Where: CERN (European research organization)
+-> This was the first web browser in history
+-> It could view and edit web pages
+-> Limitation: It only ran on NeXT computers, so it was not widely accessible to the general public
+So technically, this was the first browser, but not mass-public.
+
+
+First Popular Browser for Public Use
+Name: Mosaic
+Developers: Marc Andreessen & Eric Bina
+Year: 1993
+Organization: NCSA (University of Illinois)
+-> First browser available on Windows, Mac, and Unix
+-> Easy to use, supported images + text together
+-> This browser made the World Wide Web popular
+Mosaic is considered the first browser for true public use.
+
+| Browser              | Year | Developer                  | Why It Matters                   |
+| -------------------- | ---- | -------------------------- | -------------------------------- |
+| WorldWideWeb (Nexus) | 1990 | Tim Berners-Lee            | First browser ever               |
+| Mosaic               | 1993 | Marc Andreessen, Eric Bina | First widely used public browser |
+
+
+Making the language of web:
+In September 1995 Andreessen hired one guy called Brenden Eich to develop that language.
+Brenden Eich -> Creator of JavaScript 
+
+Development of JavaScript:
+Brenden starts the development and the rest is history. He developed the whole new language in just 10 freaking days.
+And the language was called "Mocha". Then was changed to "LiveScript" and then finally "JavaScript" (JavaScript for marketing purpose because the language Java was popular that time).
+Mocha -> LiveScript -> JavaScript 
+This is how the language of internet was born "JavaScript".
+
+Any application that can be written in JavaScript, will eventually be written in JavaScript.
+--Atwood's Law
+Jeff Atwood -> Founder of Stackoverflow
+
+More Deep?
+--Story of EcmaScript
+--Chrome Enter in 2008 -> V8 Engine
+--V8 to Node.JS -> Ryan Dahl
+--Angular.JS & React.JS -> Frameworks
+
+
+--Thanks to Anurag Singh ProCodrr
