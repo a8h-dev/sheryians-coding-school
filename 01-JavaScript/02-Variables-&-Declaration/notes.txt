@@ -1,0 +1,22 @@
+# Variables & Declaration
+
+Teach:
+-- var, let, const — line-by-line comparison
+-- Scope (global, block, functional)
+-- Reassignment, redeclaration
+-- Temporal Dead Zone
+-- Hoisting impact per type
+
+Common Confusion:
+-- Why var leaks outside block but let doesn't?
+-- Why const allows changing object properties?
+
+Mindset:
+-- Think of variables as containers scoped by purpose
+
+Practice: 
+-- Guess the output tasks (based on hoisting)
+-- Block-level counter using let/const
+
+Usage:
+-- Base of all JS, mandatory in functions, loops, API logic
