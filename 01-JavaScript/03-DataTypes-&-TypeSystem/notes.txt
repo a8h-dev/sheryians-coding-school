@@ -1,7 +1,7 @@
 # Data Types + Type System
 
 Teach:
--- Primitive types (string, number, boolean, null, undefined, symbol, bigint)
+-- Primitive types (string, number, boolean, null, undefined, symbol, bigInt)
 -- Reference types (arrays, objects, functions)
 -- Dynamic typing
 -- typeof quirks (e.g. typeof null === 'object')
