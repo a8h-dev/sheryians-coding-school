@@ -100,3 +100,31 @@
 // };
 // let b = a;
 // b.name = "Mahto";
+
+
+
+// -- Dynamic typing
+// js me static typing nhi hai and yeha par hai dynamic typing jiska mtlb hai aap data ko change kar sakte ho kyuki yeha par dynamic data types hain
+
+// Other languages
+// int a = 12;
+// a = true // not possible in other languages because pehle hi keh diya hai a int hai toh usko boolean value nhi de sakte.
+// but JavaScript me aisa nhi hai 
+
+// Dynamic Typing in JavaScript
+let a = 12; // number (primitive datatype)
+a = true; // given boolean value (primitive datatype)
+a = "Abhishek"; // given string value (primitive datatype)
+a = []; // given array value (reference datatype)
+a = null; // given null value (primitive datatype)
+a = undefined; // given undefined value (primitive datatype)
+
+// Which is better static typing or dynamic typing?
+// Answer: Everybody in this world who understands programming will always say static typing is better the reason is because you always know that the value will be integer.
+
+// Dynamic Typing good for beginners but after that Type base things are better like TypeScript after JavaScript.
+
+
+
+
+// -- typeof quirks (e.g. typeof null === 'object')
