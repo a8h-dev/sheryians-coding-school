@@ -119,3 +119,26 @@
 // var -> hoist -> undefined
 // let -> hoist -> Cannot Access Before Initialization
 // const -> hoist -> Cannot Access Before Initialization
+
+
+// -- Guess the output tasks (based on hoisting)
+
+// console.log(nm);
+// var nm = "Abhishek";
+
+// console.log(age);
+// let age = 25;
+
+// var x = 1; // global
+// {
+//     var x =2; // global
+// }
+// console.log(x);
+// // --> x value = 2
+
+// let a = 10; // block scope {} // global
+// {
+//     let a = 20;
+//     console.log("Inside: ", a);
+// }
+// console.log("Outside: ", a);
