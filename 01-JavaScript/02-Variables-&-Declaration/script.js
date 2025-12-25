@@ -58,14 +58,33 @@
 
 // -- Reassignment, redeclaration
 
-var a = 12; // Initialize
-a = 32; // Reassignment Possible with var
-var a = 56; // Redeclaration possible with var
+// var a = 12; // Initialize
+// a = 32; // Reassignment Possible with var
+// var a = 56; // Redeclaration possible with var
 
-let b = 12; // Initialize
-b = 32; // Reassignment Possible with let
-// let b = 56; Redeclaration not possible with let
+// let b = 12; // Initialize
+// b = 32; // Reassignment Possible with let
+// // let b = 56; Redeclaration not possible with let
 
-const c = 45; // Initialize
-c = 45; // Reassignment not possible with const
-// const c  = 56; // Redeclaration not possible with const
+// const c = 45; // Initialize
+// c = 45; // Reassignment not possible with const
+// // const c  = 56; // Redeclaration not possible with const
+
+
+// -- Temporal Dead Zone
+// utna area jitne me js ko pata toh hai ki variable exist karta hai par wo aapko value nhi de sakta.
+// let and const me hota hai ye
+// var hoist ho jata hai
+
+console.log(a);
+
+
+
+
+
+var gopiBahu = "laptop_dho_dungi_bas_tum_kaho";
+
+let c = 23;
+
+
+let a = 12;
