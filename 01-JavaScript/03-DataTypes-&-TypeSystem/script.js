@@ -128,3 +128,49 @@ a = undefined; // given undefined value (primitive datatype)
 
 
 // -- typeof quirks (e.g. typeof null === 'object')
+
+// typeof null
+// 'object'
+
+// typeof NaN
+// 'number'
+
+// More quirks ---
+// typeof true
+// 'boolean'
+
+// typeof 12
+// 'number'
+
+// typeof "Abhishek"
+// 'string'
+
+// typeof null
+// 'object'
+
+// typeof NaN
+// 'number'
+
+// NaN === NaN
+// false
+
+// .1 + .4
+// 0.5
+
+// .1 + .2
+// 0.30000000000000004
+
+// [] + []
+// ''
+
+// '' + ""
+// ''
+
+// 1 + "1"
+// '11'
+
+// 1 == "1"
+// true
+
+// 1 === "1"
+// false
