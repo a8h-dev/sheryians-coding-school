@@ -142,3 +142,25 @@
 //     console.log("Inside: ", a);
 // }
 // console.log("Outside: ", a);
+
+// Common Confusion:
+// -- Why var leaks outside block but let doesn't?
+// Answer: var ko aap functions ke bahar use nhi kar sakte aur let ko aap curly braces {} blocked ke bahar use nhi kar sakte 
+// if (true) {
+//     var a = 1; // Functional Scoped
+//     let b = 2; // Blocked Scoped
+// }
+// console.log(a);
+// console.log(b);
+
+// -- Why const allows changing object properties?
+// Answer: const hamesha kehta hai ki aap equal to (=) ka use krke new value nhi daal sakte
+// const ye nhi kehta ki aap value ko update nhi kar sakte ho
+// const ye kehta hai ki aap value ko reassign nhi kar sakte ho
+
+// Note: agar aap cahte hain object ke value ko change na kar paye toh Object.freeze ka use kr sakte hain
+
+const person = {name: "Abhishek"};
+person.name = "Mahto"; // updation // Allowed
+person = {}; // reassign // Not allowed
+console.log(person);
