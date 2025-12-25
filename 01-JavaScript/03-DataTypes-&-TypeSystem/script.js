@@ -184,4 +184,11 @@ let a = "5" + 1; // concatenation = "51"
 // dono me se ek string hai toh js ko lagta hai ki aapko concatenate karana hai.
 let b = "5" - 1; // subtract = 4
 
+
+
 // -- Truthy vs falsy values
+// !!false (truthy or falsy nature checking trick !!writehere)
+
+// 0 false "" null undefined NaN document.all --> Falsy Values
+
+// rest all -> truthy values
