@@ -1,0 +1,13 @@
+# Operators
+
+Teach:
+-- Arithmetic, comparison, logical, assignment, unary, ternary
+-- typeof, instanceof
+
+Confusion:
+-- !!value for truthiness
+-- Pre/post increment
+
+Practice:
+-- Logic condition quizzes
+-- Scoring logic with ternary
