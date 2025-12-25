@@ -72,19 +72,50 @@
 
 
 // -- Temporal Dead Zone
-// utna area jitne me js ko pata toh hai ki variable exist karta hai par wo aapko value nhi de sakta.
-// let and const me hota hai ye
-// var hoist ho jata hai
+// // utna area jitne me js ko pata toh hai ki variable exist karta hai par wo aapko value nhi de sakta.
+// // let and const me hota hai ye
+// // var hoist ho jata hai -- Var me Temporal Dead Zone nhi hota hai 
 
-console.log(a);
-
-
+// console.log(a);
 
 
 
-var gopiBahu = "laptop_dho_dungi_bas_tum_kaho";
-
-let c = 23;
 
 
-let a = 12;
+// var gopiBahu = "laptop_dho_dungi_bas_tum_kaho";
+
+// let c = 23;
+
+
+// let a = 12;
+
+
+// -- Hoisting impact per type
+// // Hoisting -> Ek variable ko jab JS me banate hain to wo variable 2 hisso me tut jata hai and uska declare part uper chala jata hai and uska initialization part neeche reh jata hai.
+// // Hoisting teeno me hota hai var let const
+
+
+// console.log(a);
+
+// var a = 12; 
+// // var a = undefined; // moves on top and var hai gopi bahu isliye undefined ko print kr deta hai
+// // a = 12;
+
+
+// console.log(b);
+
+// let b = 56; 
+// // let b = undefined; // moves on top lekin let hai thoda strict toh wo kehta hai cannot access before initialization
+// // b = 12;
+
+
+// // Initialiation hi kyu?
+// // Kyuki :
+
+// // let b = 56;
+// // let b = undefined; // Declaration
+// // b = 56; // Initialization
+
+// var -> hoist -> undefined
+// let -> hoist -> Cannot Access Before Initialization
+// const -> hoist -> Cannot Access Before Initialization
