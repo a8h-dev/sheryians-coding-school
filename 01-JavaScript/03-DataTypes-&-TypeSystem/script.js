@@ -112,12 +112,12 @@
 // but JavaScript me aisa nhi hai 
 
 // Dynamic Typing in JavaScript
-let a = 12; // number (primitive datatype)
-a = true; // given boolean value (primitive datatype)
-a = "Abhishek"; // given string value (primitive datatype)
-a = []; // given array value (reference datatype)
-a = null; // given null value (primitive datatype)
-a = undefined; // given undefined value (primitive datatype)
+// let a = 12; // number (primitive datatype)
+// a = true; // given boolean value (primitive datatype)
+// a = "Abhishek"; // given string value (primitive datatype)
+// a = []; // given array value (reference datatype)
+// a = null; // given null value (primitive datatype)
+// a = undefined; // given undefined value (primitive datatype)
 
 // Which is better static typing or dynamic typing?
 // Answer: Everybody in this world who understands programming will always say static typing is better the reason is because you always know that the value will be integer.
@@ -174,3 +174,14 @@ a = undefined; // given undefined value (primitive datatype)
 
 // 1 === "1"
 // false
+
+
+
+// -- Type coercion (== vs ===)
+// concept jisme aapka ek type automatically convert ho jayega
+
+let a = "5" + 1; // concatenation = "51"
+// dono me se ek string hai toh js ko lagta hai ki aapko concatenate karana hai.
+let b = "5" - 1; // subtract = 4
+
+// -- Truthy vs falsy values
