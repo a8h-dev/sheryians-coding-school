@@ -207,3 +207,27 @@ let b = "5" - 1; // subtract = 4
 // 5 + "5" = "55" --concatenation--
 
 // !!undefined = false --falsyValue--
+
+
+// Common Confusion:
+// -- Why NaN is a number
+// typeof NaN === "number" // true
+// NaN is failed number operation in JavaScript issliye typeof number hai
+// Kyuki NaN ek failed mathematical numerical operation hai issliye uska type number hota hai
+
+// -- undefined vs null
+// let x;
+// console.log(x); // undefined
+// let y = null;
+// console.log(y); // null
+// JavaScript by default assign karta hai undefined
+// Hamlog khudse Null ki value dete hain ye prove krne ke liye ki abhi tak iski value hamne conciously nhi di hui hai
+
+// -- "5" + 1 vs "5" - 1
+// "5" + 1 // "51" 
+// kyuki yeha string ke sath (+) operator hai isliye yeha priority hai string (type coercion) me convert krke concatenation karna
+
+// "5" - 1 // 4
+// kyuki yeha string ke sath (-) operator hai isliye yeha priority hai number (type coercion) me convert krke subtract krna
+
+// that is why aap kya operator use kr rhe ho uspe depend krta hai ki  implicitly conversion kis side hoga string side or number side
