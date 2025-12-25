@@ -28,6 +28,8 @@
 // -- string, number, boolean, null, undefined, symbol, bigInt
 // -- arrays [], objects {}, functions ()
 
+// primitive datatype
+// -- string, number, boolean, null, undefined, symbol, bigInt
 // string
 // '' - single quotes
 // "" - double quotes
@@ -80,3 +82,21 @@
 // let a = 9007199254740991n;
 // a = a + 32n
 // console.log(a);
+
+
+// reference datatype
+// -- arrays [], objects {}, functions ()
+
+// array
+// let a = [1,2,3];
+// let b = a;
+// b.pop();
+// console.log(a);
+// console.log(b);
+
+// object
+// let a = {
+//     name: "Abhishek"
+// };
+// let b = a;
+// b.name = "Mahto";
