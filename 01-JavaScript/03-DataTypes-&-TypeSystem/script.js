@@ -192,3 +192,18 @@ let b = "5" - 1; // subtract = 4
 // 0 false "" null undefined NaN document.all --> Falsy Values
 
 // rest all -> truthy values
+
+
+
+// -- Predict the result: true + false, null + 1, 5 + "5", !!undefined
+
+// true --1-- + false --0-- = 1
+// true + true = 2
+// false + false = 0
+
+// null --0-- + 1 = 1
+// null + null = 0
+
+// 5 + "5" = "55" --concatenation--
+
+// !!undefined = false --falsyValue--
