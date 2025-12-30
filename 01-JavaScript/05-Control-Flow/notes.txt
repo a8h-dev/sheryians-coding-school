@@ -1,0 +1,11 @@
+# Control Flow
+
+Teach:
+-- if, else if, else, switch-case, early return pattern
+
+Confusion:
+-- Fallthrough in switch-case
+
+Practice:
+-- Student grade categorizer
+-- Rock-paper-scissors logic
