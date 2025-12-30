@@ -410,3 +410,19 @@
 
 // console.log(ten(1000));
 // console.log(twenty(200));
+
+
+// ------------- counter
+
+function counter(){
+    let count = 0;
+    return function(){
+        count++;
+        return count;
+    }
+}
+let c = counter();
+console.log(c());
+console.log(c());
+console.log(c());
+console.log(c());
