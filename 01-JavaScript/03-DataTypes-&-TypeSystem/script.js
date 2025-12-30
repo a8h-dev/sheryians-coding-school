@@ -132,6 +132,9 @@
 // typeof null
 // 'object'
 
+// typeof []
+// 'object'
+
 // typeof NaN
 // 'number'
 
