@@ -1,0 +1,31 @@
+# Functions
+
+Teach: 
+- Function declarations, expressions, and arrow functions
+- Parameters vs arguments
+- Default, rest, and spreaad parameters
+- Return values and early returns
+- First-class functions (assign to variables, pass as arguments, return from other functions)
+- Higher-order functions
+- Pure vs impure functions
+- Closures and lexical scoping
+- IIFE (Immediately Invoked Function Expressions)
+- Hoisting differences between declaration and expression
+
+Common Confusion:
+- Arrow vs regular function: this context
+- Function hoisting and TDZ
+- Scope chains and closure traps
+
+Mindset: 
+- Functions = logic blocks + memory holders (closures)
+
+Practice:
+- Write a BMI calculator
+- Create a reusable discount calculator (HOF)
+- Build a counter using closure
+- Create a pure function to transform a value
+- Use IIFE to isolate variables
+
+Usage:
+Reusability, event handlers, API logic, array operations
