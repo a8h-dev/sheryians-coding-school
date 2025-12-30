@@ -1,0 +1,18 @@
+# Loops
+
+Teach:
+-- for, while, do-while
+-- break, continue
+-- for-of, forEach for arrays
+-- for-in, Object.entries for Objects
+
+Confusion:
+-- for-in vs for-of
+
+Mindset:
+-- Loop is for processing data
+
+Practice:
+-- Print pattern questions
+-- Reverse a string using Loop
+-- Sum of even/odd numbers from array
