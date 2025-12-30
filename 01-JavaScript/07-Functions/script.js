@@ -392,7 +392,21 @@
 
 // ------ Write a BMI calculator
 
-function bmi(weight, height){
-    return weight / (height * height)
-}
-console.log(bmi(69, 1.7).toFixed(2));
+// function bmi(weight, height){
+//     return weight / (height * height)
+// }
+// console.log(bmi(69, 1.7).toFixed(2));
+
+
+// ------- Create a reusable discount calculator (HOF)
+
+// function discountCalc(dis){
+//     return function(price){
+//         return price - price * (dis / 100);
+//     }
+// }
+// let ten = discountCalc(10);
+// let twenty = discountCalc(20);
+
+// console.log(ten(1000));
+// console.log(twenty(200));
