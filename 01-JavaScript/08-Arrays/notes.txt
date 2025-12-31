@@ -1,0 +1,20 @@
+# Arrays
+
+Teach:
+    - Create, access, modify arrays
+    - Array methods: push, pop, shift, unshift, splice, slice, reverse, sort
+    - map, filter, reduce, find, some, every (intro level)
+    - Destructuring, spread operator
+
+Common Confusion:
+    - splice vs slice
+    - map vs forEach
+    - sort behavior without compareFn
+
+Mindset:
+    - Arrays = organized, transformable data
+
+Practice:
+    - User filtering logic
+    - Salary reducer
+    - Top 3 products based on rating
