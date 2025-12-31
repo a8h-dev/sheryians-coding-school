@@ -412,17 +412,57 @@
 // console.log(twenty(200));
 
 
-// ------------- counter
+// ------------- counter with closures
 
-function counter(){
-    let count = 0;
-    return function(){
-        count++;
-        return count;
-    }
-}
-let c = counter();
-console.log(c());
-console.log(c());
-console.log(c());
-console.log(c());
+// function counter(){
+//     let count = 0;
+//     return function(){
+//         count++;
+//         return count;
+//     }
+// }
+// let c = counter();
+// console.log(c());
+// console.log(c());
+// console.log(c());
+// console.log(c());
+
+// ------ Create a pure function to transform a value
+
+// function double(val){
+//     return val * 2;
+// }
+// console.log(double(10));
+
+
+// - Use IIFE to isolate variables
+
+// (function(){
+//     let password = "secret password";
+//     console.log(password);
+// })();
+
+
+// Common Confusions?
+// -- Arrow vs regular function : this context.
+// jab bhi aap functions bana rhe ho aap fat arrow function bana sakte ho koi problem nhi hai, siway ek jagah ke jab aap objects create kroge.
+const obj = {
+    value: 42,
+    regular: function () { return this.value; },
+    arrow: () => this.value
+};
+//  objects ke andar jab bhi aapke pass ek key hogi jiski value ek function hai, yeha pe aaj fat arrow function use nhi kr sakte kyuki yeha pe fat arrow function use krne se aapka this keyword value loose kr dega.
+
+// -- Function hoisting and TDZ
+greet(); // Works
+function greet() {}
+
+greet(); // Error
+let greet = () => {}
+
+// Difference between Closures & HOF 
+// HOF -> Function returning function
+// Closures -> Function returning function but returning function will use some variable of the parent function.
+
+// - Scope chains and closure traps
+// khudse find out krna ye.. 
