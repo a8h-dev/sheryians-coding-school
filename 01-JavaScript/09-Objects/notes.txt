@@ -1,0 +1,21 @@
+# Objects
+
+Teach:
+    - Key-value structure
+    - Dot vs bracket notation
+    - Nesting and deep access
+    - Object destructuring
+    - Looping: for-in, Object.keys, Object.entries
+    - Copying objects: spread, Object.assign, deep clone
+    - Optional chaining, computed properties
+
+Common Confusion:
+    - Reference copy vs deep clone
+
+Mindset:
+    - Objects = structured, readable state
+
+Practice:
+    - Student manager app
+    - Address book with optional chaining
+    - Object flattener (stretch goal)
