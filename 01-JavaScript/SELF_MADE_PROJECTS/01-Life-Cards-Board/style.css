@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+#main {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    110deg,
+    rgba(75, 108, 183, 1) 11.3%,
+    rgba(24, 40, 72, 1) 99.3%
+  );
+  position: relative;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182849;
+  color: #c4c3c3;
+  padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav #back {
+  font-size: 24px;
+  display: none;
+}
+nav div h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  text-transform: capitalize;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  nav #back {
+    display: inline-block;
+  }
+  nav {
+    justify-content: space-between;
+  }
+}
+#addNewCard {
+  all: unset;
+  padding: 12px 22px;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #165ff2;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2.8rem;
+  right: 2rem;
+}
+#addNewCard:hover {
+  background-color: #084edb;
+}
+#noCards {
+  position: fixed;
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+form{
+    width: 75%;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 18px;
+    display: none;
+}
+form input, select, h6{
+    margin-top: 12px;
+    padding: 8px 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    border: 1px solid #000;
+    width: 100%;
+    border-radius: 2px;
+}
+form h6{
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+}
+form h6:hover{
+  background-color: rgb(168, 20, 50);
+}
+form input[type="submit"]{
+    background-color: #165ff2;
+    color: #fff;
+    cursor: pointer;
+}
+form input[type="submit"]:hover{
+    background-color: #084edb;
+}
+form .removeMarginTop{
+    margin-top: 0;
+}
+.cardsContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 16px;
+    padding-bottom: 8rem;
+}
+.card{
+    min-height: 285px;
+    width: 73%;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    padding: 14px 22px;
+    border-radius: 10px;
+    /* display: none; */
+}
+.card #imgContainer{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 10px;
+}
+.card #imgContainer img{
+    width: 100%;
+    height: 100%;
+}
+.card h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.card .batchCon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .batchCon .category{
+    font-size: 14px;
+    font-weight: 600;
+    background-color: lightseagreen;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.card .batchCon .priority{
+    font-size: 14px;
+    font-weight: 600;
+    background-color: lightsalmon;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+@media (min-width: 600px) {
+    nav div h1{
+        font-weight: 500;
+    }
+    .cardsContainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 30%;
+    }
+    form{
+        max-width: 40%;
+    }
+
+}

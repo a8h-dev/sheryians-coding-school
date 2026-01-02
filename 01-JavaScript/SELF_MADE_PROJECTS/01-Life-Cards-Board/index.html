@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Cards Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <nav>
+      <div id="back">
+        <i class="ri-arrow-left-long-line"></i>
+      </div>
+      <div>
+        <h1>Life cards board</h1>
+      </div>
+    </nav>
+
+    <main id="main">
+      <button id="addNewCard">
+        <i class="ri-heart-add-fill"></i>
+        Add new card
+      </button>
+
+      <p id="noCards">No cards added</p>
+
+      <form action="" class="dikhRa">
+        <input required id="title" type="text" placeholder="Title" class="removeMarginTop" />
+        <input required id="des" type="text" placeholder="Short Description" />
+        <input id="img" type="text" placeholder="Image Link" />
+        <select required id="category">
+          <option selected disabled value="">Choose Category</option>
+          <option value="Idea">Idea</option>
+          <option value="Goal">Goal</option>
+          <option value="Memories">Memories</option>
+          <option value="Person">Person</option>
+          <option value="Task">Task</option>
+          <option value="Note">Note</option>
+          <option value="Resource">Resource</option>
+        </select>
+        <select required id="priority">
+          <option selected disabled value="">Choose Priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input type="submit" />
+        <h6 class="btnClose">Close</h6>
+      </form>
+
+      <div class="cardsContainer">
+
+        <!-- <div class="card">
+          <div id="imgContainer">
+            <img src="https://a8h.dev/assets/images/a8h-profile-img.jpeg" />
+          </div>
+          <h1>Abhishek Mahto</h1>
+          <p>
+            I turn ideas into code. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Repellat, rerum nam!
+          </p>
+          <div class="batchCon">
+            <h3 class="category">Person</h3>
+            <h3 class="priority">High</h3>
+          </div>
+        </div>
+     -->
+        
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
