@@ -79,15 +79,31 @@
 
 // **MINI PROJECT 1 -> KEY TYPED VIEWER**
 
-let view = document.querySelector("#view");
-// pure screen ko ham window kehte hain issliye
-window.addEventListener("keydown", function(dets){
-    // console.log(dets);
-    if(dets.key === " "){
-        view.textContent = "Space";
-    }
-    else{
-        view.textContent = dets.key;
+// let view = document.querySelector("#view");
+// // pure screen ko ham window kehte hain issliye
+// window.addEventListener("keydown", function(dets){
+    //     // console.log(dets);
+    //     if(dets.key === " "){
+        //         view.textContent = "Space";
+        //     }
+        //     else{
+            //         view.textContent = dets.key;
+            //     }
+            // })
+            
+            
+// **MINI PROJECT 2 -> CUSTOM FILE UPLOAD BUTTON**
+
+let btn = document.querySelector("#btn");
+let fileInp = document.querySelector("#fileInp");
+
+btn.addEventListener("click", function(){
+    fileInp.click();
+})
+fileInp.addEventListener("change", function(dets){
+    const file = dets.target.files[0];
+    if(file){
+        btn.textContent = file.name;
     }
 })
 

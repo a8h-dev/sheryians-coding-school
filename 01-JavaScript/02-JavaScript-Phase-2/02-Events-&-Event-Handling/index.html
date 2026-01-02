@@ -32,11 +32,28 @@
             align-items: center;
             justify-content: center;
         }
-        h1{
+        /* h1{
             color: #555;
             font-size: 12rem;
             font-weight: 300;
             user-select: none;
+        } */
+
+
+        input{
+            display: none;
+            color: #fff;
+        }
+        #btn{
+            padding: 12px 22px;
+            background-color: rgb(41, 143, 114);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        #btn:hover{
+            background-color: rgb(25, 93, 73);
         }
     </style>
 </head>
@@ -57,9 +74,15 @@
         <option value="1+">One plus</option>
     </select> -->
 
-    <div id="main">
+    <!-- <div id="main">
         <h1 id="view">Type Something</h1>
+    </div> -->
+
+    <div id="main">
+        <input id="fileInp" type="file">
+        <div id="btn">Upload File</div>
     </div>
+    
 
     <script src="script.js"></script>
 </body>
