@@ -25,12 +25,51 @@
             width: 100%;
         }
         #main{
+            background-color: #222;
             width: 100%;
             height: 100%;
-            background-color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 30px;
+        }
+        input{
+            display: block;
+            margin: 12px;
+            padding: 12px;
+            font-size: 18px; 
+        }
+        input[type="submit"]{
+            cursor: pointer;
+        }
+        .card{
+            max-width: 220px;
+            margin: 12px;
+            padding: 20px;
+            border: 1px solid #555;
+            display: inline-block;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .card p{
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .card h5{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .profile{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .profile img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card h3{
+            font-size: 16px;
         }
         /* h1{
             color: #555;
@@ -38,9 +77,7 @@
             font-weight: 300;
             user-select: none;
         } */
-
-
-        input{
+        /* input{
             display: none;
             color: #fff;
         }
@@ -54,10 +91,30 @@
         }
         #btn:hover{
             background-color: rgb(25, 93, 73);
-        }
+        } */
     </style>
 </head>
 <body>
+         <div id="main">
+         <form action="">
+             <input type="text" placeholder="profile pic">
+             <input type="text" placeholder="name">
+             <input type="text" placeholder="occupation">
+             <input type="text" placeholder="info">
+             <input type="submit">
+         </form>
+<!-- 
+         <div class="card">
+            <div class="profile">
+                <img src="https://www.a8h.dev/assets/images/a8h-profile-img.jpeg" alt="BROKEN IMAGE">
+            </div>
+
+            <h3>Abhishek Mahto</h3>
+            <h5>I turn ideas into code.</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas provident quidem a atque eligendi, ratione cupiditate, ullam odio pariatur dolor dolore dolorem saepe!</p>
+         </div> -->
+
     <!-- <h1>Apple</h1> -->
 
     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fuga hic fugit rem quos voluptatem maxime, accusamus quisquam impedit ex odit et soluta?</p> -->
@@ -78,11 +135,15 @@
         <h1 id="view">Type Something</h1>
     </div> -->
 
-    <div id="main">
+    <!-- <div id="main">
         <input id="fileInp" type="file">
         <div id="btn">Upload File</div>
     </div>
-    
+     -->
+
+
+
+     </div>
 
     <script src="script.js"></script>
 </body>
