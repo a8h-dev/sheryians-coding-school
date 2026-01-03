@@ -194,67 +194,85 @@
 //     // form ka jo default nature hai - reload karwana / submit karwana wo prevent ho jayega 
 // })
 
-// -------------- Event bubbling and capturing
+// // -------------- Event bubbling and capturing
 
-// **EVENT BUBBLING**
-// rarely used
-// - jispe event aayega agar uspar listener nhi hua toh hamara event uske parent par listener dhundhega aur aisa krte karte uper ki taraf move krega - body -> html tags included
-// bubbling sirf ye nhi hoti ki agar event listener sirf ispe hua toh ispe ruk jayega. bubbling ye hoti hai ki agar ispe hua toh chalega firbhi chahe ispe event listener ho ya na ho fir bhi apne parent pe jayega. 
+// // **EVENT BUBBLING**
+// // rarely used
+// // - jispe event aayega agar uspar listener nhi hua toh hamara event uske parent par listener dhundhega aur aisa krte karte uper ki taraf move krega - body -> html tags included
+// // bubbling sirf ye nhi hoti ki agar event listener sirf ispe hua toh ispe ruk jayega. bubbling ye hoti hai ki agar ispe hua toh chalega firbhi chahe ispe event listener ho ya na ho fir bhi apne parent pe jayega. 
 
-// let nav = document.querySelector("#nav");
-// nav.addEventListener("click", function(){
-//     alert("clicked");
-// })
+// // let nav = document.querySelector("#nav");
+// // nav.addEventListener("click", function(){
+// //     alert("clicked");
+// // })
 
-// jaise ham yeha par button me click kr rhe hain tab bhi nav ka event chal ja rha hai. This is event bubbling.
+// // jaise ham yeha par button me click kr rhe hain tab bhi nav ka event chal ja rha hai. This is event bubbling.
 
-// **LETS CREATE SOMETHING**
+// // **LETS CREATE SOMETHING**
 
-// let ul = document.querySelector("ul");
-// ul.addEventListener("click", function(dets){
-//     // target check kiya
-//     // console.log(dets.target)
+// // let ul = document.querySelector("ul");
+// // ul.addEventListener("click", function(dets){
+// //     // target check kiya
+// //     // console.log(dets.target)
 
-//     // dets.target.style.textDecoration = "line-through";
-//     dets.target.classList.toggle("lt");
+// //     // dets.target.style.textDecoration = "line-through";
+// //     dets.target.classList.toggle("lt");
 
-// })
+// // })
 
-// **EVENT CAPTURING**
-// event bubbling se vice-versa
+// // **EVENT CAPTURING**
+// // event bubbling se vice-versa
 
-let a = document.querySelector(".a");
-let b = document.querySelector(".b");
-let c = document.querySelector(".c");
-let btn = document.querySelector("button");
+// let a = document.querySelector(".a");
+// let b = document.querySelector(".b");
+// let c = document.querySelector(".c");
+// let btn = document.querySelector("button");
 
-// yeha phase 2 chal rhi hai
-// phase 1 kaise chal rhi hogi ? - jab maine button pe click kiya
-// jab maine button pe click kiya toh sabse pehle a pe / top element pe check hua hoga - kya uspe capture phase on hai
-// pehle capture phase chalta hai -> fir bubbling phase chalta hai
-// ab kyuki bubbling phase jo hai wo by default activated hota hai toh wo chal jata hai, capture phase aap on nhi karte ho toh wo nhi chalta
-btn.addEventListener("click", function(){
-    console.log("button clicked");
-});
-c.addEventListener("click", function(){
-    console.log("c clicked");
-}, true);
-b.addEventListener("click", function(){
-    console.log("b clicked");
-});
-// capture phase on kaise karna hai?
-// kisi bhi listener ke last me curly braces ke baad }, true); likh diziye
-a.addEventListener("click", function(){
-    console.log("a clicked");
-}, true);
-// ye capture phase on ho gya
-// toh pehle capture phase chalega fir bubbling phase chalega kyuki wo fir bydefault hota hai
+// // yeha phase 2 chal rhi hai
+// // phase 1 kaise chal rhi hogi ? - jab maine button pe click kiya
+// // jab maine button pe click kiya toh sabse pehle a pe / top element pe check hua hoga - kya uspe capture phase on hai
+// // pehle capture phase chalta hai -> fir bubbling phase chalta hai
+// // ab kyuki bubbling phase jo hai wo by default activated hota hai toh wo chal jata hai, capture phase aap on nhi karte ho toh wo nhi chalta
+// btn.addEventListener("click", function(){
+//     console.log("button clicked");
+// });
+// c.addEventListener("click", function(){
+//     console.log("c clicked");
+// }, true);
+// b.addEventListener("click", function(){
+//     console.log("b clicked");
+// });
+// // capture phase on kaise karna hai?
+// // kisi bhi listener ke last me curly braces ke baad }, true); likh diziye
+// a.addEventListener("click", function(){
+//     console.log("a clicked");
+// }, true);
+// // ye capture phase on ho gya
+// // toh pehle capture phase chalega fir bubbling phase chalega kyuki wo fir bydefault hota hai
 
-// **concept**
-// jab bhi aap click krte ho ya koi bhi event raise karte ho to aapka jo event-flow / propagation hai do phases me chalta hai.
-// Phase 1: event top level element se child / niche ki taraf ayega
-// Phase 2: event raised element se parent / uper ki taraf jayega
-// aur pehle Phase 1 hoti hai
+// // **concept**
+// // jab bhi aap click krte ho ya koi bhi event raise karte ho to aapka jo event-flow / propagation hai do phases me chalta hai.
+// // Phase 1: event top level element se child / niche ki taraf ayega
+// // Phase 2: event raised element se parent / uper ki taraf jayega
+// // aur pehle Phase 1 hoti hai
 
-// capture phase on kardo toh cycle on ho jati hai
-// hamesha phase 1 hi pehle hoti hai par wo bydefault off rehti hai, agar ham usse on krde toh pehle phase 1 ka answer milega
+// // capture phase on kardo toh cycle on ho jati hai
+// // hamesha phase 1 hi pehle hoti hai par wo bydefault off rehti hai, agar ham usse on krde toh pehle phase 1 ka answer milega
+
+// **Practice: 1**
+// ------------------ Live character counter
+let inp = document.querySelector("input");
+let span = document.querySelector("span");
+inp.addEventListener("input", function(){
+    // span.textContent = inp.value.length;
+    // span.textContent = 20 - inp.value.length;
+    let leftCount = 20 - inp.value.length;
+    span.textContent = leftCount;
+    
+    if(leftCount < 0){
+        span.style.color = "red";
+    }
+    else{
+        span.style.color = "#fff";
+    }
+})
