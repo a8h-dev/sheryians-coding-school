@@ -51,15 +51,73 @@
 // utpataang sa code
 
 // use
-let form = document.querySelector("form");
-let email = document.querySelector("#email");
+// let form = document.querySelector("form");
+// let email = document.querySelector("#email");
 
-form.addEventListener("submit", function(dets){
-    dets.preventDefault();
-    const checkEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let ans =  checkEmail.test("a@a.a");
-    console.log(ans);
-})
+// form.addEventListener("submit", function(dets){
+//     dets.preventDefault();
+//     const checkEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+//     let ans =  checkEmail.test("a@a.a");
+//     console.log(ans);
+// })
 
 // ChatGPT Prompt to create your custom regex
 // - create a regex which allows a username
+
+
+// # Practice:
+// ---
+// --------- Email/password validator
+
+// yeha main chatGPT se form ka html and css banwaya
+// prompt: I am creating a email password validator using html css and js, give me html and css code so that i can write js part
+
+// agar form me koi suggesstion nhi chahiye
+// autocomplete="off" in html form
+
+let email = document.querySelector("#email");
+let pass = document.querySelector("#password");
+let form = document.querySelector("form");
+let error = document.querySelector(".error");
+
+form.addEventListener("submit", function(dets){
+    dets.preventDefault();
+
+    document.querySelector("#emailErr").textContent = "";
+    document.querySelector("#passErr").textContent = "";
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    let emailAns = emailRegex.test(email.value);
+    let passAns = passRegex.test(pass.value);
+
+    let isValid = true;
+
+    if(!emailAns){
+        document.querySelector("#emailErr").textContent = "Email is incorrect";
+        document.querySelector("#emailErr").style.visibility = "initial";
+        isValid = false;
+    }
+    if(!passAns){
+        document.querySelector("#passErr").textContent = "Password is incorrect";
+        document.querySelector("#passErr").style.visibility = "initial";
+        isValid = false;
+    }
+
+    if(isValid){
+        document.querySelector("#fine").style.display = "initial";
+    }
+})
+
+// --------- Interactive feedback form with error highlights
+// abhi jo banaya wahi concepts hain
+
+// # Confusion:
+// ---
+// - Difference between value and textContent
+// Value vs TextContent
+// Value: input banaya uska value chahiye .value
+// TextContent: tag ka text access
+
+// - Form submission vs button click

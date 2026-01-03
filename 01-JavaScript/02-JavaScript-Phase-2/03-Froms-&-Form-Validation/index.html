@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms and Form Validation</title>
-    <style>
-        body{
-            background-color: #111;
-        }
-        small{
-            color: red;
-            font-size: 12px;
-        }
-        #hide{
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Password Validator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <input pattern="[a-z]{3,8}" minlength="3" maxlength="10"  id="name" type="text" placeholder="name">
-        <div id="hide">
-            <br>
-            <small>Your name should be greater then 2 characters</small>
-        </div>
-        <br><br>
-        <input id="email" type="email" placeholder="email">
-        <br><br>
-        <input id="pass" type="password" placeholder="password">
-        <br><br>
-        <select>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
-        <br><br>
-        <textarea placeholder="Tell us about you"></textarea>
-        <br><br>
-        <input type="submit">
-    </form>
 
-    <script src="script.js"></script>
+  <div class="container">
+    <h2>Login</h2>
+
+    <form id="loginForm" novalidate>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <small id="emailErr" class="error">Error message</small>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <small id="passErr" class="error">Error message</small>
+      </div>
+
+      <button type="submit">Login</button>
+
+    </form>
+    <span id="fine">Everything is fine</span>
+  </div>
+
+  <!-- JS file tum khud likhoge -->
+  <script src="script.js"></script>
 </body>
 </html>
