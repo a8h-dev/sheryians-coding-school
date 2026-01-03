@@ -109,46 +109,87 @@
 
 // **SUBMIT EVENT**
 // ==MINI PROJECT 2 -> Dynamic Data to Card==
-let form = document.querySelector("form");
-let input = document.querySelectorAll("input");
-let main = document.querySelector("#main");
+// let form = document.querySelector("form");
+// let input = document.querySelectorAll("input");
+// let main = document.querySelector("#main");
 
-form.addEventListener("submit", function(dets){
-    dets.preventDefault(); // Reload/Refresh na kre
+// form.addEventListener("submit", function(dets){
+//     dets.preventDefault(); // Reload/Refresh na kre
 
-    let card = document.createElement("div");
-    card.classList.add("card");
+//     let card = document.createElement("div");
+//     card.classList.add("card");
 
-    let profile = document.createElement("div");
-    profile.classList.add("profile");
+//     let profile = document.createElement("div");
+//     profile.classList.add("profile");
 
-    let img = document.createElement("img");
-    img.setAttribute(
-        "src",
-        input[0].value
-    );
+//     let img = document.createElement("img");
+//     img.setAttribute(
+//         "src",
+//         input[0].value
+//     );
 
-    let h3 = document.createElement("h3");
-    h3.textContent = input[1].value;
+//     let h3 = document.createElement("h3");
+//     h3.textContent = input[1].value;
 
-    let h5 = document.createElement("h5");
-    h5.textContent = input[2].value;
+//     let h5 = document.createElement("h5");
+//     h5.textContent = input[2].value;
 
-    let p = document.createElement("p");
-    p.textContent = input[3].value;
+//     let p = document.createElement("p");
+//     p.textContent = input[3].value;
 
 
-    profile.appendChild(img);
-    card.appendChild(profile);
-    card.appendChild(h3);
-    card.appendChild(h5);
-    card.appendChild(p);  
+//     profile.appendChild(img);
+//     card.appendChild(profile);
+//     card.appendChild(h3);
+//     card.appendChild(h5);
+//     card.appendChild(p);  
 
-    main.appendChild(card);
+//     main.appendChild(card);
 
-    input.forEach(function(inp){
-        if(inp.type !== "submit"){
-            inp.value = "";
-        }
-    })
-})
+//     input.forEach(function(inp){
+//         if(inp.type !== "submit"){
+//             inp.value = "";
+//         }
+//     })
+// })
+
+// **MOUSEOVER**
+// let abcd = document.querySelector("#abcd");
+
+// abcd.addEventListener("mouseover", function(){
+//     abcd.style.backgroundColor = "yellow";
+// })
+
+// **MOUSEOUT**
+// abcd.addEventListener("mouseout", function(){
+//     abcd.style.backgroundColor = "red";
+// })
+
+// **MOUSEMOVE**
+// window.addEventListener("mousemove", function(dets){
+//     abcd.style.top = dets.y + "px";
+//     abcd.style.left = dets.x + "px";
+// })
+
+// **KEYUP**
+// window.addEventListener("keyup", function(dets){
+//     console.log(dets);
+// })
+
+// ------------- Event object: target, type, preventDefault
+// Event object: details jo function me receive hoti hain
+// target:- details me hota hai, jiske uper function chalti hai
+// type:- Event type kya tha 
+
+// let abcd = document.querySelector("#abcd");
+// abcd.addEventListener("click", function(dets){
+//     console.log(dets);
+// })
+
+// preventDefault()
+// mainly used in while submitting forms
+// let form = document.querySelector("form");
+// form.addEventListener("submit", function(dets){
+//     dets.preventDefault();
+//     // form ka jo default nature hai - reload karwana / submit karwana wo prevent ho jayega 
+// })
