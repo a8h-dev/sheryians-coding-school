@@ -260,19 +260,36 @@
 // // hamesha phase 1 hi pehle hoti hai par wo bydefault off rehti hai, agar ham usse on krde toh pehle phase 1 ka answer milega
 
 // **Practice: 1**
-// ------------------ Live character counter
-let inp = document.querySelector("input");
-let span = document.querySelector("span");
-inp.addEventListener("input", function(){
-    // span.textContent = inp.value.length;
-    // span.textContent = 20 - inp.value.length;
-    let leftCount = 20 - inp.value.length;
-    span.textContent = leftCount;
-    
-    if(leftCount < 0){
-        span.style.color = "red";
-    }
-    else{
-        span.style.color = "#fff";
-    }
-})
+// - Live character counter
+// let inp = document.querySelector("input");
+// let span = document.querySelector("span");
+// inp.addEventListener("input", function(){
+//     // span.textContent = inp.value.length;
+//     // span.textContent = 20 - inp.value.length;
+//     let leftCount = 20 - inp.value.length;
+//     span.textContent = leftCount;
+
+//     if(leftCount < 0){
+//         span.style.color = "red";
+//     }
+//     else{
+//         span.style.color = "#fff";
+//     }
+// })
+
+// ------------------- Event delegation
+// Study Yourself - hint: same as before
+
+// **COMMON CONFUSIONS**
+
+// - event.target vs event.currentTarget
+// - Capturing phase vs bubbling phase
+
+// Events vs Listener
+// Event: Click, Input, Submit - kon sa event?
+// Listener: function() - Action step.
+// we can say the complete thing is a listener
+
+// Capturing vs Bubbling
+// Capturing: vice versa of bubbling (pehle ye hota hai but by default ye off hota hai hame isko }, true); krke on krna parta hai agar ham on karna chahe tab) // rarely used
+// Bubbling: for example apka button click hua, agar uspar event listener hua toh ya nhi bhi hua toh bhi aapka listener uper jayega. Parent pe (ye bydefault on hota hai, lekin technically capturing ke baad hota hai kyuki capturing bydefault off hota hai toh dekhne se lagta hai ye pehle hua lekin agar ham capturing on kar de toh bubbling capturing ke baad hota hai) // mainly used
