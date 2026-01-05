@@ -149,3 +149,13 @@ btn.addEventListener("click", () => {
 // //     - Login form that remembers user's name using storage
 // Try Yourself
 
+
+// # Confusion:
+// - Why only strings work in localStorage
+// localStorage ki API is built like that only for strings but we can always use JSON.stringify()
+
+// - Cookies need manual encoding/expriation handling
+// - website chala rhe ho 
+// - ban hua tha ya nhi?
+// - user ko login krne ke baad hame ek token milta hai on frontend wo token ham cookies me save kra sakte hain
+// - cookies ko ham automatically kuch time ke baad expire bhi kar sakte hain -- TRY YOURSELF
