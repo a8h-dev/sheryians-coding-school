@@ -18,4 +18,4 @@
 
 ---
 
-**Taught is taught rest you try yourslef**
+**Taught is taught rest you try yourself**
