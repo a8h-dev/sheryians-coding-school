@@ -1,0 +1,21 @@
+# The this Keyword
+---
+
+# Teach:
+    - this in global scope, function, method, event handler, class
+    - Arrow functions and lexical this
+    - Manual binding: bind, call, apply
+---
+
+# Confusion:
+    - Why arrow function "lose" this for methods
+    - this inside event listeners
+---
+
+# Mindset:
+    - this doestn't lie - the call site defines its behavior
+---
+
+# Practice:
+    - Create custom logger object with multiple method styles
+    - Use bind() to fix incorrect context
