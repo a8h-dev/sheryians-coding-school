@@ -173,100 +173,146 @@
 // default values set krna ya initialize krna, variables create krna ye sab iske hote hain
 // ye sab ham sirf kaam krke hi sikh payenge
 
-class CreatePencil{
-    // **constructor**
-    constructor(name, company, price, color){
-        this.name = name;
-        this.company = company;
-        this.price = price;
-        this.color = color;
-    }
-    // toh constructor ke andar aap apne variables sare define kr dete ho
-    // aur uske bahar aap apne methods wagera bana sakte ho
-    // **methods**
-    write(text){
-        let h1 = document.createElement("h1");
-        h1.textContent = text;
-        h1.style.color = this.color;
-        document.body.appendChild(h1);
-    }
-    // yeha arrow function use hua
-    erase(){
-        document.body.querySelectorAll("h1").forEach((elem) => {
-            if(elem.style.color === this.color){
-                elem.remove();
-            }
-        })
-    }
-}
+// class CreatePencil{
+//     // **constructor**
+//     constructor(name, company, price, color){
+//         this.name = name;
+//         this.company = company;
+//         this.price = price;
+//         this.color = color;
+//     }
+//     // toh constructor ke andar aap apne variables sare define kr dete ho
+//     // aur uske bahar aap apne methods wagera bana sakte ho
+//     // **methods**
+//     write(text){
+//         let h1 = document.createElement("h1");
+//         h1.textContent = text;
+//         h1.style.color = this.color;
+//         document.body.appendChild(h1);
+//     }
+//     // yeha arrow function use hua
+//     erase(){
+//         document.body.querySelectorAll("h1").forEach((elem) => {
+//             if(elem.style.color === this.color){
+//                 elem.remove();
+//             }
+//         })
+//     }
+// }
 
-let p1 = new CreatePencil("nataraj", "nataraj", 10, "black");
-let p2 = new CreatePencil("apsara", "apsara", 15, "blue");
+// let p1 = new CreatePencil("nataraj", "nataraj", 10, "black");
+// let p2 = new CreatePencil("apsara", "apsara", 15, "blue");
 
-// Mindset behind it
-// now you've seen how Object-Oriented works
-// kitna easy ho gya sabkuch this is why Object Oriented is one of best approach to do things
-// ab aapne wo sab nhi likha koi bhi faltu giri nhi likhi hai ki boht hi random ajeeb sa spaghetti code nhi likha ki kahi se bhi kuch bhi pick kro aur hatao na na na...
-// Cohort me Object Oriented ka use krke pura OS banaya hai. 
+// // Mindset behind it
+// // now you've seen how Object-Oriented works
+// // kitna easy ho gya sabkuch this is why Object Oriented is one of best approach to do things
+// // ab aapne wo sab nhi likha koi bhi faltu giri nhi likhi hai ki boht hi random ajeeb sa spaghetti code nhi likha ki kahi se bhi kuch bhi pick kro aur hatao na na na...
+// // Cohort me Object Oriented ka use krke pura OS banaya hai. 
 
-// **extends**
-// ye kya hota hai??
-// basically already ek class aap banake rakhe hue ho, aapne nayi class banayi aur nayi class pichli class ki sari values ko use kr sakti hai aur apni khudki kuch hold krti hai.
+// // **extends**
+// // ye kya hota hai??
+// // basically already ek class aap banake rakhe hue ho, aapne nayi class banayi aur nayi class pichli class ki sari values ko use kr sakti hai aur apni khudki kuch hold krti hai.
 
-// Example: 
-class User{
-    // **constructor**
-    constructor(name, address, username, email){
-        this.name = name;
-        this.address = address;
-        this.username = username;
-        this.email = email;
-        this.role = "user";
-    }
+// // Example: 
+// class User{
+//     // **constructor**
+//     constructor(name, address, username, email){
+//         this.name = name;
+//         this.address = address;
+//         this.username = username;
+//         this.email = email;
+//         this.role = "user";
+//     }
 
-    // **methods**
-    checkRole(){
-        return `You are a ${this.role}`;
-    }
-    write(text){
-        let h1 = document.createElement("h1");
-        h1.textContent = `${this.name} : ${text}`;
-        document.body.appendChild(h1);
-    }
-}
+//     // **methods**
+//     checkRole(){
+//         return `You are a ${this.role}`;
+//     }
+//     write(text){
+//         let h1 = document.createElement("h1");
+//         h1.textContent = `${this.name} : ${text}`;
+//         document.body.appendChild(h1);
+//     }
+// }
 
-// ab maan lete hain aapke pass sirf users nhi aapke pass Admins bhi hain
-// yeha pe role suru hota hai
-// kya aap mante ho ki har Admin ke pass wo sab hoga jo user ke pass hai? name, address, username, email, role?? -- haan 
-// toh ham ye duplicate krke wapis se nhi likhna chahenge
-// issiliye ham likhenge extends kaise?? dekho niche
-// **extends**
-class Admin extends User{
-    // ye kya hai??
-    // basically ham ye keh rhe hain ki Admin class wo sab rakhti hai jo User ke pass hai.
+// // ab maan lete hain aapke pass sirf users nhi aapke pass Admins bhi hain
+// // yeha pe role suru hota hai
+// // kya aap mante ho ki har Admin ke pass wo sab hoga jo user ke pass hai? name, address, username, email, role?? -- haan 
+// // toh ham ye duplicate krke wapis se nhi likhna chahenge
+// // issiliye ham likhenge extends kaise?? dekho niche
+// // **extends**
+// class Admin extends User{
+//     // ye kya hai??
+//     // basically ham ye keh rhe hain ki Admin class wo sab rakhti hai jo User ke pass hai.
 
-    // super ko call krne ke baad aapko uper wale values ko constructor me bhejna prega
-    // fir super me sari chizen aapko pass krni pregi
-    // Admin ka apna constructor
-    constructor(name, address, username, email){
-        // aapko pehle super() ko call krna hoga mtlb -> parent ke constructor ko call krna prega
-        // super pe pass krne ka mtlb uper User wale constructor ke pass chala jayega
-        // **super**
-        super(name, address, username, email);
+//     // super ko call krne ke baad aapko uper wale values ko constructor me bhejna prega
+//     // fir super me sari chizen aapko pass krni pregi
+//     // Admin ka apna constructor
+//     constructor(name, address, username, email){
+//         // aapko pehle super() ko call krna hoga mtlb -> parent ke constructor ko call krna prega
+//         // super pe pass krne ka mtlb uper User wale constructor ke pass chala jayega
+//         // **super**
+//         super(name, address, username, email);
 
-        // ab admin ki khudki chizen aapko rakhni hai
-        this.role = "admin";
-    }
-    // ab yeha pe ek new method bana rhe hain remove;
-    // iski khas baat ye hui ki sirf Admin remove kr sakta hai User remove nhi kar payega.
-    remove(){
-        document.querySelectorAll("h1").forEach(function(elem){
-            elem.remove();
-        })
-    }
+//         // ab admin ki khudki chizen aapko rakhni hai
+//         this.role = "admin";
+//     }
+//     // ab yeha pe ek new method bana rhe hain remove;
+//     // iski khas baat ye hui ki sirf Admin remove kr sakta hai User remove nhi kar payega.
+//     remove(){
+//         document.querySelectorAll("h1").forEach(function(elem){
+//             elem.remove();
+//         })
+//     }
 
-}
+// }
 
-let u1 = new User("Abhishek", "Bhopal", "a8h-dev", "a8h.dev@mail.com");
-let u2 = new User("Sakshi", "Bhopal", "sakshi123", "sakshi123@mail.com");
-let a1 = new Admin("admin1", "India", "adminnnnn1111", "admin1@gmail.com");
+// let u1 = new User("Abhishek", "Bhopal", "a8h-dev", "a8h.dev@mail.com");
+// let u2 = new User("Sakshi", "Bhopal", "sakshi123", "sakshi123@mail.com");
+// let a1 = new Admin("admin1", "India", "adminnnnn1111", "admin1@gmail.com");
+
+
+// ------------ Prototypcal inheritence vs classical inheritence
+// **classical inheritence** -> lagbhag har language me hota hai
+// just abhi piche padha
+// classes banana and unhe extend kar dena
+
+// har language me
+// classical inheritence - class -> class
+
+// hamari lanuage JavaScript me pehle classical inheritence hoti hi nhi thi tab hota tha prototypical inheritence
+
+// **prototypal inheritence** -> ye sirf JavaScript me hota hai
+// sirf JavaScript me
+// prototypal inheritence - object -> object
+
+// let coffee = {
+//     color: "dark",
+
+//     // method
+//     drink: function(){
+//         console.log("gut gut gut");
+//     }
+// }
+
+// let arabicaCoffee = Object.create(coffee);
+// arabicaCoffee.taste = "bitter";
+// // ye drink uper se aara hai
+// arabicaCoffee.drink();
+// console.log(arabicaCoffee.color);
+
+// ek object hai aap chaho toh uski saari props/methods ko inherit kara dete ho dusre object me 
+
+let a = {};
+let b = Object.create(a);
+// ab a me jo jo hoga, wo sab b ke pass bhi hai uske prototype me and aap use use kr sakte ho. Shared memory ban gyi hai
+
+// ek doubt hona chahiye?
+// hamne aisa kyu nhi kiya?
+// let b = {...a};
+// kyuki isse hard copy banti Shared memory nhi
+
+
+// ----------- Encapsulation (private fields using #)
+// ye khudse padhai krni hai
+// try learning yourself.
