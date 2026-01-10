@@ -1,0 +1,91 @@
+// # 2. Performance Optimization
+
+// ------------- Debouncing and Throttling
+
+// Debouncing -> aap koi action kar rhe ho and aap ye nhi cahte har action pe kuch ho, jab bhi mere actions ke beech me koi specific gap aa jaye toh fir reaction perform ho.
+
+// For Example:
+
+// mindset: ye sare code aajkal koi bhi haath se nhi likhta mostly sab GPT, Google, StackOverFlow se hi nikale jate hain. Code yaad krna nhi smjhna jruri hai.
+
+// Overview:
+
+// function debounce(fnc, delay) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(function () {
+//       fnc(...args);
+//     }, delay);
+//   };
+// }
+
+// let input = document.querySelector("input");
+// input.addEventListener(
+//   "input",
+//   debounce(function () {
+//     console.log("hey");
+//   }, 1000)
+// );
+
+// Let's Understand it:
+
+// let input = document.querySelector("input");
+
+// function debounce(fnc, delay){
+//     // Console proof ki debounce() chal chuka tha
+//     // fnc(), delay dono yeha pe aa chuka hai page load hote hi
+//     // console.log("hey");
+
+//     // isiliye ham return krte hain ek aur function
+//     // jab debounce() chala tab ye function return hokr debounce() ke jagah chala gya. Kyu? Kyuki return hone wali chiz function call pe wapis chali jati hai.
+
+//     // toh jab bhi future me ham koi input krenge tab ye return wala function chalega. Kyu? kyuki debounce() ke jagah ye chala gya tha return hokr page load hote ke sath.
+
+//     // Debounce kya hai: Tumhare current type kiye hue bande pe total gap hona chahiye itne ms ka.
+
+//     let timer;
+
+//     // ye ...args wahi hai jo ham event listener lagane ke baad jo dets/details accept krte hain na function (dets) {} aise, wahi dets hai ...args. Kaise? Kyuki ye return wala function return hokr niche call wala function me chala gya hai na toh dets bhi waha accpet krne ke bajaye yehi peaccept krna prega na kyuki uske jagah toh ab ye gya hai.
+
+//     return function(...args){
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+//             fnc(...args);
+//         }, delay);
+//     }
+// }
+
+// // -- debounce() jaise code pe kahi mila -> function turant chal chuka tha input nhi bhi kiya tha tab bhi. Ye react me bhi hota tha.
+// input.addEventListener("input", debounce(function(){
+//     console.log("Hey");
+// }, 1000));
+
+// Debouncing -> ek delay bataoge tum utna delay jab bhi aayega action ka reaction milega.
+
+// --- Both kafi similar hai
+
+// Throttling -> Intervel par chalunga, action agar hota rha and aapne ek interval bataya toh utne interval me apka event chalega.
+
+function throttle(fnc, delay){
+    let timer = 0;
+    return function(...args){
+        let now = Date.now();
+        if(now - timer >= delay){
+            timer = now;
+            fnc(...args);
+        }
+    }
+}
+
+let input = document.querySelector("input");
+input.addEventListener(
+  "input",
+  throttle(function () {
+    console.log("ran");
+  }, 1000)
+);
+
+// Din me 4-5 baar ache se dekho dono ache se smjhna cahte ho toh and always you can talk to chatGPT. There is no other way.
+
+// Code likhna toh ab baad ki chiz hai kyuki wo AI / Internet se mil hi jati hai. Asli engineer wali main baat toh ye hai ki aap code ko ache se smjha pao detail me ki code kaam kaise kar rha hai.

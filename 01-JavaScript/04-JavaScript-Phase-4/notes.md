@@ -4,6 +4,8 @@
 
 - Hame ye exactly padhna kyu hai? Ans: Design Patterns ko aap issliye padhte ho, mainly 2 reasons hai. 1. (Asli/Main Reason, bade level pe) aap maintainable, scaleable, modular code likhna cahte ho. 
 
+- Maan lete hain aapko ek product banana hai aur har product ke pass kuch khas features honge hi honge toh aap waha pe design patterns ka use kr sakte ho. aapko har baar same code likhne ki jrurt nhi hai har baar aapko ek object banane ke liye pura data dene ki jrurt nhi hai. Aap Class based patterns bana sakte ho. Toh iss trike se aap apne patterns ko re-use kr sakte ho, jo ki actually me ek asli engineer me aur college student me farak create karta hai.
+
 ---
 
 ------------------------------------------------------
@@ -29,4 +31,40 @@
 # Practice:
 ---
     - Build Notification Service using Observer pattern
+------------------------------------------------------
+
+
+
+
+------------------------------------------------------
+# 2. Performance Optimization
+
+// Asliyat ye hai ki aapki website bana pana sirf main game nhi hai aap ek website bana lete ho - Good, aap usey optimize kar pate ho - Very Good.
+
+// Difference:
+// College student sirf website bana sakta hai, Ek asli engineer jo products/websites banata hai unko wo optimize karta hai.
+
+
+---
+
+# Teach: 
+---
+    - Debouncing and Throttling
+    - Lazy Loading Images (with IntersectionObserver)
+    - Code Splitting (intro level)
+    - Avoiding unnecessary reflows and repaints
+    - Memory leaks: timers, event listeners
+
+# Confusion:
+---
+    - Debounce vs Throttle timing behaviour
+
+# Mindset:
+---
+    - UX is speed + responsiveness
+
+# Practice:
+---
+    - Live search with debounce
+    - Scroll-based lazy loading list
 ------------------------------------------------------
