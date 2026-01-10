@@ -82,3 +82,47 @@
 // Bank.check();
 // Bank.draw(8000);
 // Bank.check();
+
+
+
+
+// --------------------------------------------------------------
+
+// --------------------- Factory Function Pattern
+// Ek function banate ho jo objects create karta hai (factory = object banane ki machine)
+
+// Factory Function Pattern ek aisa design pattern hai jisme ham ek simple function likhte hain jo naye objects banakar return karta hai, bina class ya new keyword use kiye.
+
+// Is pattern ka main idea hai -> object creation ko ek function ke through control karna.
+
+// Har baar jab tum factory function call krte ho, tumhe ek naya object milta hai jisme apne methods aur (agar chaho to) private data ho sakta hai.
+
+// Yeh pattern specially useful hai jab tumhe ek hi type ke bohot sare objects chahiye, jaise users, products, tasks, etc.
+
+// function createProduct(name, price){
+//     let stock = 10;
+//     return {
+//         name,
+//         price,
+//         checkStock(){
+//             console.log(stock);
+//         },
+//         buy(qty){
+//             if(qty <= 10){
+//                 stock -= qty;
+//                 console.log(`${qty} pieces booked - ${stock} pieces left.`);
+//             }
+//             else{
+//                 console.error(`We only have ${stock} pieces left.`)
+//             }
+//         },
+//         refill(qty){
+//             stock += qty;
+//             console.log(`refilled the stock - ${stock} pieces now.`);
+//         }
+//     }
+// }
+
+// let iphone = createProduct("iphone", 70000);
+// let kitkat = createProduct("kitkat", 10);
+// iphone.buy(6);
