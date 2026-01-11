@@ -127,14 +127,60 @@
 // 2000 lines code -> Heavy
 // 100 lines, 500 lines, hisse bana dete hain - jo jab jrurt padti hai tab load krte hain
 
-let btn = document.querySelector("button");
-btn.addEventListener("click", async function(){
-    // export import krne ke liye html ke script.js me type="module" rakhna jruri hota hai.
-    // Import() async code hota hai, load lene me time lega tabtak iske baad ka code chal jayega
-    // Isliye ham await lagate hain taki pehle ye line chale uske baad hi agla line chalega
-    // await ko use krne ke liye parent function ke aage async lagana jruri hai
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", async function(){
+//     // export import krne ke liye html ke script.js me type="module" rakhna jruri hota hai.
+//     // Import() async code hota hai, load lene me time lega tabtak iske baad ka code chal jayega
+//     // Isliye ham await lagate hain taki pehle ye line chale uske baad hi agla line chalega
+//     // await ko use krne ke liye parent function ke aage async lagana jruri hai
 
-    // isse wahi import hoga jo heavy.js file se export kiya gya ho
-    let heavy = await import("./heavy.js")
-    heavy.veryHeavy();
-})
+//     // isse wahi import hoga jo heavy.js file se export kiya gya ho
+//     let heavy = await import("./heavy.js")
+//     heavy.veryHeavy();
+// })
+
+
+// ---------------------------------------------------------
+
+// ------------- Avoiding unnecessary reflows and repaints
+
+// Problem:
+
+// yeha jitna baar li DOM me add hora hai DOM Tree refresh hora hai utna baar, ye kafi slow process hai kyuki ye kaafi websites ko real world scenerios me laagy, slow kar sakta hai.
+
+// Iss chiz ko nhi karna hai, mtlb kabhi bhi aap DOM me direct change kr rhe ho, CSS me direct change kr rhe ho khoob saare toh wo nhi karna hai.
+
+// const ul = document.querySelector("ul");
+
+// for(let i = 0; i <= 100; i++){
+//     const li = document.createElement("li");
+//     li.textContent = i;
+//     ul.appendChild(li);
+// }
+
+
+// Good Way:
+
+// const ul = document.querySelector("ul");
+
+// // ye memory (RAM) me ek space book kar dega
+// const space = document.createDocumentFragment();
+
+// for(let i = 0; i <= 100000; i++){
+//     const li = document.createElement("li");
+//     li.textContent = i;
+//     // pehle space me append krlo
+//     space.appendChild(li);
+// }
+
+// // fir last me ul me append kr do DOM Tree sirf ek baar update hua
+// ul.appendChild(space);
+
+// ab hamne 100,000 list banaye hain lekin kya ham unn sabko ek baar me hi dekh rhe hain ? -> No
+// iss case me hamlog optimize krne ke liye sare elements ek sath load krte hi nhi hain.
+
+
+// Best Optimized Way:
+// Koi jrurt nhi hai 1 lakh elements ko ek sath load krne ki. 200, 250 elements se jada hame screen me ek time pe toh dikhne se rhe. 
+// Toh ham is case me kya krte hain? : Hamlog sare elements load krte hi nhi hain, hamlog 200, 250 elements print krte hain fir hamara pura scroll ho jata hai fir ham agle 250 print krte hain, then so on. So is trike se karte hain isse hamare browser pe kabhi bhi ekdum se load nhi jata.
+// But still document.createDocumentFragment(); is a faster way.
