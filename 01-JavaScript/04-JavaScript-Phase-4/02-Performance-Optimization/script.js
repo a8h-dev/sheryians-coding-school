@@ -96,24 +96,45 @@
 
 // data- : ksii bhi naam ke aage data- laga doge toh ham iski value JavaScript me access kar pate hain.
 
-let imgs = document.querySelectorAll("img");
-console.log(imgs);
+// let imgs = document.querySelectorAll("img");
+// console.log(imgs);
 
-const observer = new IntersectionObserver(function(entries, observer){
-    entries.forEach(function(entry){
-        if(entry.isIntersecting){
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.add("loaded");
-            observer.unobserve(entry);
-        }
-    })
-}, {
-    root: null,
-    threshold: 0.1,
+// const observer = new IntersectionObserver(function(entries, observer){
+//     entries.forEach(function(entry){
+//         if(entry.isIntersecting){
+//             const img = entry.target;
+//             img.src = img.dataset.src;
+//             img.classList.add("loaded");
+//             observer.unobserve(entry);
+//         }
+//     })
+// }, {
+//     root: null,
+//     threshold: 0.1,
+// })
+
+// imgs.forEach(function(img){
+//     // ye observer hame banana padta hai JavaScript me default nhi hota
+//     observer.observe(img);
+// });
+
+
+
+// ---------------------------------------------------------
+
+// ------------- Code Splitting (intro level)
+
+// 2000 lines code -> Heavy
+// 100 lines, 500 lines, hisse bana dete hain - jo jab jrurt padti hai tab load krte hain
+
+let btn = document.querySelector("button");
+btn.addEventListener("click", async function(){
+    // export import krne ke liye html ke script.js me type="module" rakhna jruri hota hai.
+    // Import() async code hota hai, load lene me time lega tabtak iske baad ka code chal jayega
+    // Isliye ham await lagate hain taki pehle ye line chale uske baad hi agla line chalega
+    // await ko use krne ke liye parent function ke aage async lagana jruri hai
+
+    // isse wahi import hoga jo heavy.js file se export kiya gya ho
+    let heavy = await import("./heavy.js")
+    heavy.veryHeavy();
 })
-
-imgs.forEach(function(img){
-    // ye observer hame banana padta hai JavaScript me default nhi hota
-    observer.observe(img);
-});
