@@ -184,3 +184,26 @@
 // Koi jrurt nhi hai 1 lakh elements ko ek sath load krne ki. 200, 250 elements se jada hame screen me ek time pe toh dikhne se rhe. 
 // Toh ham is case me kya krte hain? : Hamlog sare elements load krte hi nhi hain, hamlog 200, 250 elements print krte hain fir hamara pura scroll ho jata hai fir ham agle 250 print krte hain, then so on. So is trike se karte hain isse hamare browser pe kabhi bhi ekdum se load nhi jata.
 // But still document.createDocumentFragment(); is a faster way.
+
+
+// ---------------------------------------------------------
+
+// ------------- Memory leaks: timers, event listeners
+
+let count = 0;
+const int = setInterval(() => {
+    if(count < 10){
+        count++;
+        console.log(count);
+    }
+    // hame lag rhaa bas ho gya lekin aisa nhi hai
+    // 10 tak print krne ke baad bhi ye chal rha hai bus wo if ke condition ko survive nhi kr pa rha hai. Proof? Else lagakr dekhlo
+
+    // that's the problem
+    else{
+        // console.log("still chal rha hai...");
+        clearInterval(int);
+        console.log("Finished");
+    }
+    // so aapko hamesha ye makesure krna padta hai ki aap hamesha apne timers ko clear kre.
+}, 500);
