@@ -67,25 +67,67 @@
 
 // Throttling -> Intervel par chalunga, action agar hota rha and aapne ek interval bataya toh utne interval me apka event chalega.
 
-function throttle(fnc, delay){
-    let timer = 0;
-    return function(...args){
-        let now = Date.now();
-        if(now - timer >= delay){
-            timer = now;
-            fnc(...args);
+// function throttle(fnc, delay){
+//     let timer = 0;
+//     return function(...args){
+//         let now = Date.now();
+//         if(now - timer >= delay){
+//             timer = now;
+//             fnc(...args);
+//         }
+//     }
+// }
+
+// let input = document.querySelector("input");
+// input.addEventListener(
+//   "input",
+//   throttle(function () {
+//     console.log("ran");
+//   }, 1000)
+// );
+
+// // Din me 4-5 baar ache se dekho dono ache se smjhna cahte ho toh and always you can talk to chatGPT. There is no other way.
+
+// // Code likhna toh ab baad ki chiz hai kyuki wo AI / Internet se mil hi jati hai. Asli engineer wali main baat toh ye hai ki aap code ko ache se smjha pao detail me ki code kaam kaise kar rha hai.
+
+// ---------------------------------------------------------
+
+// ------------- Lazy Loading Images (with IntersectionObserver)
+
+// data- : ksii bhi naam ke aage data- laga doge toh ham iski value JavaScript me access kar pate hain.
+
+let imgs = document.querySelectorAll("img");
+console.log(imgs);
+
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.add("loaded");
+            observer.unobserve(entry);
         }
-    }
-}
+    })
+}, {
+    root: null,
+    threshold: 0.1,
+})
 
-let input = document.querySelector("input");
-input.addEventListener(
-  "input",
-  throttle(function () {
-    console.log("ran");
-  }, 1000)
-);
+// const observer = new IntersectionObserver(function(entries, observer){
+//     entries.forEach(function(entry){
+//         if(entry.isIntersecting){
+//             const img = entry.target;
+//             img.src = img.dataset.src;
+//             img.classList.add("loaded");
+//             observer.unobserve(entry);
+//         }
+//     })
+// }, {
+//     root: null,
+//     threshold: 0.1,
+// });
 
-// Din me 4-5 baar ache se dekho dono ache se smjhna cahte ho toh and always you can talk to chatGPT. There is no other way.
-
-// Code likhna toh ab baad ki chiz hai kyuki wo AI / Internet se mil hi jati hai. Asli engineer wali main baat toh ye hai ki aap code ko ache se smjha pao detail me ki code kaam kaise kar rha hai.
+imgs.forEach(function(img){
+    // ye observer hame banana padta hai JavaScript me default nhi hota
+    observer.observe(img);
+});
