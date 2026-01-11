@@ -68,3 +68,22 @@
     - Live search with debounce
     - Scroll-based lazy loading list
 ------------------------------------------------------
+# 3. Advanced Topics & Architecture Thinking
+
+// Hame apne UI and Logic ke code ko alag alag rakhna chahiye
+
+---
+
+# Teach: 
+---
+    - Pure vs impure functions
+    - Functional Programming basics (map/ filter/ reduce as pipeline)
+    - Separation of concerns (DOM vs logic)
+    - Custom utilities (e.g., own implementation of map, deep clone)
+    - How JS works in browser (Event Loop, Web APIs, Call Stack)
+
+# Mindset:
+---
+    - Think in architecture, not features
+
+------------------------------------------------------
