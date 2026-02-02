@@ -1,12 +1,12 @@
 import React from 'react';
+import Cards from './components/Cards';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return (
     <div>
-      <div className='card'>
-        <h1>Abhishek Mahto</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perspiciatis?</p>
-      </div>
+      <Navbar />
+      <Cards />
     </div>
   );
 }
