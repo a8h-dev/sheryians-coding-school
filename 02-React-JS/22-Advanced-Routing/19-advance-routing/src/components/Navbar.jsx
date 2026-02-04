@@ -8,8 +8,9 @@ const Navbar = () => {
         <Link className='text-lg font-semibold' to='/'>Home</Link>
         <Link className='text-lg font-semibold' to='/about'>About</Link>
         <Link className='text-lg font-semibold' to='/contact'>Contact</Link>
+        <Link className='text-lg font-semibold' to='/courses'>Courses</Link>
         <Link className='text-lg font-semibold' to='/product'>Product</Link>
-      </div>;
+      </div>
     </div>
   );
 }

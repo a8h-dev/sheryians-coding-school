@@ -9,19 +9,5 @@ h1 {
   font-weight: 600;
   text-decoration: underline;
   white-space: nowrap;
-}
-
-/* 404 page */
-
-#overlay {
-  mask-image: radial-gradient(
-    circle 120px at 50% 50%,
-    transparent 0%,
-    black 150px
-  );
-  -webkit-mask-image: radial-gradient(
-    circle 120px at 50% 50%,
-    transparent 0%,
-    black 150px
-  );
+  text-transform: capitalize;
 }

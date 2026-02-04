@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Kids from "./pages/Kids";
+import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
 
 const App = () => {
   return (
@@ -19,13 +21,19 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
+        {/* Nested Routing */}
         <Route path="/product" element={<Product />}>
           <Route path="men" element={<Men />} />
           <Route path="women" element={<Women />} />
           <Route path="kids" element={<Kids />} />
         </Route>
 
+        {/* 404 page */}
         <Route path="*" element={<NotFound />} />
+
+        {/* Dynamic Routing */}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:courseId" element={<CourseDetail />} />
       </Routes>
       <Footer />
     </div>
