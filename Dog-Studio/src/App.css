@@ -8,6 +8,16 @@ html,
 body,
 #root {
   width: 100%;
-  height: 100%;
   background-color: #000;
+}
+
+main{
+  position: relative;
+}
+
+section{
+  min-height: 100vh;
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 2;
 }
