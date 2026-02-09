@@ -25,3 +25,4 @@ GLTF/GLB Viewer Extention to view model in vs-code.
 We give rotation not in deg but in PI radian
 Texture and Normal Map
 Downloaded dog_normals.jpg from dogstudio.co
+Get MatCap Meterials not combined
