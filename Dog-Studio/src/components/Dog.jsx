@@ -55,7 +55,7 @@ const Dog = () => {
         rotation={[0, Math.PI / 6, 0]}
       />
       <directionalLight position={[0, 5, 5]} color={0xffffff} intensity={10} />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </>
   );
 };
