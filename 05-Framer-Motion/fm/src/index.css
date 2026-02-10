@@ -19,4 +19,15 @@ body{
   width: 200px;
   background-color: crimson;
   border: 2px solid #fff;
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/96768393-b5ef-4ecd-b39c-6ef9c12ef61a/dgnid74-e506cf25-aad2-42d7-8a26-2b0739ab66fb.png/v1/fill/w_970,h_824/oggy_png_by_mistercraigboi_dgnid74-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiIvZi85Njc2ODM5My1iNWVmLTRlY2QtYjM5Yy02ZWY5YzEyZWY2MWEvZGduaWQ3NC1lNTA2Y2YyNS1hYWQyLTQyZDctOGEyNi0yYjA3MzlhYjY2ZmIucG5nIiwid2lkdGgiOiI8PTExNzcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.wcVKsAbOtfoNsP7EwfLz_UOms6Q6PsKVTWE2ButFAj0");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: royalblue;
+  border: 2px solid #fff;
 }

@@ -54,3 +54,8 @@
 - You need advanced animation capabilities and highly customized animations.
 - Your project is not limited to React, or you are using multiple frameworks.
 - You require the use of GSAP's powerful plugins for tasks like scroll-based animations or complex SVG animations.
+
+# Install Framer Motion
+- npm i motion / npm i framer-motion
+- import { motion } from 'motion/react';
+- 
