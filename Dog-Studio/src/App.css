@@ -9,6 +9,8 @@ body,
 #root {
   width: 100%;
   background-color: #000;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 main{
@@ -20,4 +22,116 @@ section{
   border: 2px solid #fff;
   position: relative;
   z-index: 2;
+}
+
+#section-1{
+  position: relative;
+
+  --gap: 3rem;
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    padding-top: 3.5;
+
+    .nav-elem{
+      cursor: pointer;
+    }
+
+    .nav-elem:nth-child(2){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      i{
+        color: red;
+        font-size: 1.2rem;
+      }
+    }
+
+    .nav-elem:nth-child(3){
+      i{
+        font-size: 1.5rem;
+      }
+    }
+    
+    svg{
+      max-width: 6rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .middle{
+    display: flex;
+    gap: var(--gap);
+
+    .left,
+    .right{
+      width: 50%;
+    }
+
+    .left{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      padding-block: 10rem;
+    }
+
+    h1{
+      font-size: 5rem;
+      line-height: 1;
+      text-align: end;
+    }
+  }
+
+  .bottom{
+    display: flex;
+    gap: var(--gap);
+
+    .left,
+    .right{
+      width: 50%;
+
+      .text-container{
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2{
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        h3{
+          font-size: 0.9rem;
+          font-weight: 400;
+        }
+        p{
+          white-space: nowrap;
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .first-line{
+    width: 40rem;
+    background-color: rgba(255, 0, 0, 0.472);
+    height: 1.8px;
+    position: absolute;
+    transform: rotate(45deg) translate(-24rem, -12rem);
+  }
+
+  .second-line{
+    width: 15rem;
+    background-color: rgba(255, 0, 0, 0.472);
+    height: 1.8px;
+    position: absolute;
+    transform: rotate(-45deg) translate(65rem, 23rem);
+  }
 }

@@ -26,3 +26,5 @@ We give rotation not in deg but in PI radian
 Texture and Normal Map
 Downloaded dog_normals.jpg from dogstudio.co
 Get MatCap Meterials not combined
+Used GSAP ScrollTrigger with React
+Position uses more RAM
