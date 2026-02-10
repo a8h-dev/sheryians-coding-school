@@ -135,3 +135,36 @@ section{
     transform: rotate(-45deg) translate(65rem, 23rem);
   }
 }
+
+#section-2{
+  padding-block: 20rem;
+  
+  .titles{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 5rem;
+    gap: 2rem;
+
+    .title{
+      display: flex;
+      gap: 3.5rem;
+      opacity: 0.2;
+      cursor: pointer;
+      transform: all 0.3s linear;
+
+      h1{
+        font-size: 5.2rem;
+        font-weight: 100;
+        line-height: 1;
+      }
+
+      small{
+        margin-top: 0.7rem;
+        font-size: 0.8rem;
+      }
+    }
+    .title:hover{
+      opacity: 0.8;
+    }
+  }
+}
