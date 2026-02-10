@@ -5,16 +5,22 @@ const App = () => {
     <div>
       <motion.div
       className="box"
-      animate={{
-        x: [0, 800, 800, 0, 0],
-        y: [0, 0, 300, 300, 0],
-        rotate: [0, 360, 0, -360, 0]
+      drag
+      whileDrag={{
+        scale: 0.8
       }}
-      transition={{
-        duration: 4,
-        delay: 1,
-        repeat: Infinity,
-        ease: 'anticipate'
+      dragConstraints={{
+        left: 0,
+        top: 0,
+        right: 1000,
+        bottom: 500
+      }}
+      dragDirectionLock = 'true'
+      whileHover={{
+        backgroundColor: "green"
+      }}
+      whileTap={{
+        scale: 0.8
       }}
       >
 
