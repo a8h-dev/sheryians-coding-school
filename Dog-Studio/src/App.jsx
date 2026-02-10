@@ -16,14 +16,14 @@ function App() {
           <img id="opera" src="/opera.png" />
         </div>
         <Canvas
-        id="canvas-elem"
+          id="canvas-elem"
           style={{
             height: "100vh",
             width: "100vw",
             position: "fixed",
             top: 0,
             left: 0,
-            zIndex: 1
+            zIndex: 1,
           }}
         >
           <Dog />
@@ -73,15 +73,15 @@ function App() {
             <div className="right">
               <div className="text-container">
                 <h2>
-                Dogstudio is a multidisciplinary creative studio at the
-                intersection of art, design and technology.
-              </h2>
-              <h3>
-                Our goal is to deliver amazing experiences that make people
-                talk, and build strategic value for brands, tech, entertainment,
-                arts & culture.
-              </h3>
-              <p>Facebook / Instagram / Dribbble / Twitter / Newsletter</p>
+                  Dogstudio is a multidisciplinary creative studio at the
+                  intersection of art, design and technology.
+                </h2>
+                <h3>
+                  Our goal is to deliver amazing experiences that make people
+                  talk, and build strategic value for brands, tech,
+                  entertainment, arts & culture.
+                </h3>
+                <p>Facebook / Instagram / Dribbble / Twitter / Newsletter</p>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ function App() {
         <section id="section-2">
           <div className="titles">
             <div className="title">
-              <small style={{visibility: "hidden"}}>2020 - ONGOING</small>
+              <small style={{ visibility: "hidden" }}>2020 - ONGOING</small>
               <small>FEATURED PROJECTS</small>
             </div>
             <div img-title="tomorrowland" className="title">
@@ -128,14 +128,45 @@ function App() {
         <section id="section-3">
           <div className="top">
             <div className="left">
-              <small>THIS IS HOW WE DO IT</small>
-              <h3>We're crafting emotional experiences aimed at improving results</h3>
+              <div className="text-con">
+                <div>
+                  <small>THIS IS HOW WE DO IT</small>
+                </div>
+                <div>
+                  <h3>
+                    We're crafting <br /> emotional <br /> experiences aimed{" "}
+                    <br /> at improving <br /> results
+                  </h3>
+                </div>
+              </div>
             </div>
             <div className="right"></div>
           </div>
+        </section>
+        <section id="section-4">
           <div className="bottom">
-            <p>Dogstudio is a design & technology firm working globally from our offices based in Belgium and Chicago.</p>
-            <p> Our strong focus on producing high quality & emotional brandings, digital products and experiences became a signature.</p>
+            <div className="left"></div>
+            <div className="right">
+              <div>
+                <p>
+                  Dogstudio is a design & technology firm working globally from
+                  our offices based in Belgium and Chicago.
+                </p>
+                <p>
+                  Our strong focus on producing high quality & emotional
+                  brandings, digital products and experiences became a
+                  signature.
+                </p>
+              </div>
+              <div>
+                <p>
+                  Were passionate about moving people and solving problems for
+                  the likes of Microsoft, The Museum of Science And Industry Of
+                  Chicago, The Kennedy Center of Washington, Dragone, Quanta
+                  Magazine, and many more.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
