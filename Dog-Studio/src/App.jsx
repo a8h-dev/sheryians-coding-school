@@ -125,7 +125,19 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="section-3"></section>
+        <section id="section-3">
+          <div className="top">
+            <div className="left">
+              <small>THIS IS HOW WE DO IT</small>
+              <h3>We're crafting emotional experiences aimed at improving results</h3>
+            </div>
+            <div className="right"></div>
+          </div>
+          <div className="bottom">
+            <p>Dogstudio is a design & technology firm working globally from our offices based in Belgium and Chicago.</p>
+            <p> Our strong focus on producing high quality & emotional brandings, digital products and experiences became a signature.</p>
+          </div>
+        </section>
       </main>
     </>
   );

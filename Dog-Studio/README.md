@@ -28,3 +28,5 @@ Downloaded dog_normals.jpg from dogstudio.co
 Get MatCap Meterials not combined
 Used GSAP ScrollTrigger with React
 Position uses more RAM
+CSS :has selector
+Shaders: Vertex Shader -> (Shape), Fragment Shader -> (Color) [GLSL Language]
