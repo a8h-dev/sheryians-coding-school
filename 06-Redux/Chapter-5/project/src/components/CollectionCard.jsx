@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
+import { removeCollection, removedToast } from "../redux/features/collectionSlice";
 
+const CollectionCard = ({ item }) => {
 
-const CollectionCard = ({item}) => {
+  const dispatch = useDispatch();
+  const removeFromCollection = (item) => {
+    dispatch(removeCollection(item.id))
+    dispatch(removedToast())
+  }
+
   return (
     <div className="w-[21vw] h-66 bg-white rounded">
       <div className="h-full relative">
@@ -30,12 +38,14 @@ const CollectionCard = ({item}) => {
           id="bottom"
           className="w-full flex gap-2 justify-between items-center px-6 py-10 text-white absolute bottom-0"
         >
-          <h2 className="text-sm font-semibold overflow-hidden capitalize">{item.title}</h2>
+          <h2 className="text-sm font-semibold overflow-hidden capitalize">
+            {item.title}
+          </h2>
           <button
-          onClick={() => {
-            console.log('removed')
-          }}
-          className="bg-indigo-900 active:scale-95 cursor-pointer text-white rounded px-3 py-2 font-medium"
+            onClick={() => {
+              removeFromCollection(item);
+            }}
+            className="bg-indigo-900 active:scale-95 cursor-pointer text-white rounded px-3 py-2 font-medium"
           >
             Remove
           </button>
@@ -43,6 +53,6 @@ const CollectionCard = ({item}) => {
       </div>
     </div>
   );
-}
+};
 
 export default CollectionCard;
