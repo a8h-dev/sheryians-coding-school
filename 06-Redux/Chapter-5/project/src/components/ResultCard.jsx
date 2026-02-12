@@ -1,5 +1,14 @@
 
 const ResultCard = ({ item }) => {
+
+  const addToCollection = (item) => {
+    const oldData = JSON.parse(localStorage.getItem('collection')) || [];
+    
+    const newData = [...oldData, item];
+    
+    localStorage.setItem('collection', JSON.stringify(newData));
+  }
+
   return (
     <div className="w-[21vw] h-66 bg-white rounded">
       <div className="h-full relative">
@@ -30,7 +39,12 @@ const ResultCard = ({ item }) => {
           className="w-full flex gap-2 justify-between items-center px-6 py-10 text-white absolute bottom-0"
         >
           <h2 className="text-sm font-semibold overflow-hidden capitalize">{item.title}</h2>
-          <button className="bg-indigo-900 active:scale-95 cursor-pointer text-white rounded px-3 py-2 font-medium">
+          <button
+          onClick={() => {
+            addToCollection(item)
+          }}
+          className="bg-indigo-900 active:scale-95 cursor-pointer text-white rounded px-3 py-2 font-medium"
+          >
             Save
           </button>
         </div>
