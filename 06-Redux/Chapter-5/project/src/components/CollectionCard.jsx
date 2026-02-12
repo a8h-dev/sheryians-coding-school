@@ -1,14 +1,6 @@
-import { useDispatch } from "react-redux";
-import { addCollection, addedToast } from "../redux/features/collectionSlice";
 
-const ResultCard = ({ item }) => {
 
-  const dispatch = useDispatch();
-  const addToCollection = (item) => {
-    dispatch(addCollection(item))
-    dispatch(addedToast())
-  }
-
+const CollectionCard = ({item}) => {
   return (
     <div className="w-[21vw] h-66 bg-white rounded">
       <div className="h-full relative">
@@ -41,16 +33,16 @@ const ResultCard = ({ item }) => {
           <h2 className="text-sm font-semibold overflow-hidden capitalize">{item.title}</h2>
           <button
           onClick={() => {
-            addToCollection(item)
+            console.log('removed')
           }}
           className="bg-indigo-900 active:scale-95 cursor-pointer text-white rounded px-3 py-2 font-medium"
           >
-            Save
+            Remove
           </button>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default ResultCard;
+export default CollectionCard;
