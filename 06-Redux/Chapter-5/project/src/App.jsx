@@ -1,12 +1,17 @@
-import { fetchPhotos } from "./api/mediaApi";
+import { fetchPhotos, fetchVideos } from "./api/mediaApi";
 
 const App = () => {
   return (
     <div className="h-screen text-white w-full bg-gray-950">
-      <button onClick={ async () => {
+      <button className="bg-green-400 px-4 py-2 m-5" onClick={ async () => {
         const data = await fetchPhotos('dog');
         console.log(data.results);
       }}>Get Photos</button>
+
+      <button className="bg-green-400 px-4 py-2 m-5" onClick={ async () => {
+        const data = await fetchVideos('dog');
+        console.log(data.videos);
+      }}>Get Videos</button>
     </div>
   );
 }
